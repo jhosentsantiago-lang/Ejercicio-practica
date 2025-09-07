@@ -2,103 +2,110 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Organigrama ramas</title>
+  <title>Currículum</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f6f7fb;
+      background: #f5f6fa;
       margin: 0;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .tree {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 0;
     }
 
     .master {
-      background: #3b82f6;
-      color: white;
-      padding: 16px 24px;
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
       border-radius: 12px;
-      font-weight: bold;
-      margin-bottom: 40px;
-      position: relative;
-    }
-
-    /* líneas que salen de la master */
-    .master::after {
-      content: "";
-      position: absolute;
-      bottom: -40px;
-      left: 50%;
-      width: 2px;
-      height: 40px;
-      background: #333;
-    }
-
-    .branches {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      position: relative;
-    }
-
-    .branch {
-      background: white;
-      border: 2px solid #3b82f6;
-      border-radius: 10px;
-      padding: 14px;
-      min-width: 160px;
-      text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
     }
 
-    /* líneas horizontales que conectan a las ramas */
-    .branches::before {
-      content: "";
-      position: absolute;
-      top: -20px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #333;
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 20px;
     }
 
-    .branches::after {
-      content: "";
-      position: absolute;
-      top: -20px;
-      left: 50%;
-      width: 2px;
-      height: 20px;
-      background: #333;
-    }
-
-    img {
-      width: 100%;
+    .header img {
+      width: 120px;
       height: 120px;
       object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #3b82f6;
+    }
+
+    .name {
+      flex: 1;
+    }
+
+    .name h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #333;
+    }
+
+    .name p {
+      margin: 4px 0;
+      color: #555;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .section h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #3b82f6;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 4px;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills li {
+      background: #3b82f6;
+      color: white;
+      padding: 6px 12px;
       border-radius: 8px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <div class="tree">
-    <div class="master">MASTER</div>
+  <div class="master">
+    <!-- Rama 1 + Rama 2 -->
+    <div class="header">
+      <!-- Rama Foto -->
+      <img src="https://via.placeholder.com/150" alt="Foto de perfil">
 
-    <div class="branches">
-      <!-- Rama 1: Foto -->
+      <!-- Rama Nombre -->
+      <div class="name">
+        <h1>Juan Pérez</h1>
+        <p>Estudiante de Informática</p>
+        <p>Email: juanperez@email.com</p>
+        <p>Tel: +57 300 123 4567</p>
+      </div>
+    </div>
 
-
-      <!-- Rama 2: Nombre -->
-
-
-      <!-- Rama 3: Habilidades -->
-
+    <!-- Rama Habilidades -->
+    <div class="section skills">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Trabajo en equipo</li>
+      </ul>
     </div>
   </div>
 </body>
